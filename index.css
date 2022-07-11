@@ -1,0 +1,675 @@
+*{margin: 0; padding: 0; }
+ul{list-style: none;}
+a{text-decoration: none; color: #000;}
+body{background-color: #222760; }
+/* body{background: rgb(34,39,96);
+    background: linear-gradient(180deg, rgba(34,39,96,1) 0%, rgba(90,97,180,1) 50%, rgba(95,133,228,1) 100%);} */
+body::-webkit-scrollbar{
+    width: 15px;
+}
+body::-webkit-scrollbar-thumb{
+    height: 20%;
+    background: #ded22188;
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-track{
+    background: linear-gradient(rgb(0, 0, 0) , rgb(39, 28, 87) , rgb(74, 21, 134));
+}
+html,body{width: 100%; height: 100%; }
+
+
+
+
+
+.header{width: 100%; height: 99%;
+    background-image: url("../images/portfolio/nightsky4.png");
+    z-index: -1;
+}
+.header .header-wrap{
+    width: 100%; 
+    /* height: 1090px;     */
+    height: 100%;
+}
+
+
+.header .header-wrap .nav{
+    width: 100%;
+    height: 125px;
+    position: fixed;
+    background-color: #000a35ce;
+    z-index: 1;
+}
+
+.header .header-wrap .nav .left .logo a{
+    position: absolute;
+    width: 160px; height: 125px;
+    padding-left: 25px;
+    top: 25px;
+}
+
+.header .header-wrap .nav .right{
+    width: 50%;    
+    height: 125px;
+    line-height: 125px;
+    /* background-color: pink; */
+    float: right;
+}
+.header .header-wrap .nav .right ul{
+    float: right;
+    width: 90%;
+    margin-right: 100px;
+}
+.header .header-wrap .nav .right ul li{
+    width: 25%;
+    float: left;    
+    position: relative;    
+    text-align: center;
+}
+.header .header-wrap .nav .right ul li a{
+    margin-right: 90px;
+    color: #ded221;    
+    font-family: 'LeferiPoint-SpecialItalicA';
+    font-size: 30px;
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+}
+.header .header-wrap .nav .right ul li:hover{    
+    font-weight: bold;        
+}
+
+.header .header-wrap .nav .right ul li::after{
+    content: "";
+    opacity: 0;
+    transition: 0.5s;
+    width: 20px;
+    height: 20px;
+    background-color: #ded22188;
+    position: absolute;
+    border-radius: 30%;
+    left: 25px;
+    top: 30px;
+}
+.header .header-wrap .nav .right ul li:hover::after{
+    border-radius: 50%;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.header .header-wrap .nav .right ul li::before{
+    content: "";
+    transition: 0.5s;
+
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    border-bottom: 3px solid #ded22188;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 55px;
+    /* border-radius: 20px; */
+    opacity: 0;
+}
+
+.header .header-wrap .nav .right ul li:nth-child(1):before{
+    width: 50%;
+}
+.header .header-wrap .nav .right ul li:nth-child(2):before{
+    width: 60%;
+}
+.header .header-wrap .nav .right ul li:nth-child(3):before{
+    width: 55%;
+}
+.header .header-wrap .nav .right ul li:nth-child(4):before{
+    width: 65%;
+}
+
+.header .header-wrap .nav .right ul li:hover::before{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+.header .header-wrap .center{    
+    width: 600px;
+    /* height: 100%;     */
+    position: absolute;
+    top: 22%;
+    left: 30%;
+    /* background-color: #fff; */
+}
+.header .header-wrap .center p{
+    /* background-color: pink; */
+    color: #ded221;
+    font-size: 80px;
+    font-family: 'Black Han Sans', sans-serif;    
+}
+.header .header-wrap .center p:nth-child(3){
+    /* background-color: pink; */
+    color: #ded221;
+    font-size: 150px;
+    font-family: 'Black Han Sans', sans-serif;    
+    float: left;
+}
+.header .header-wrap .center p:nth-child(4){    
+    line-height: 200px;
+}
+
+.header .header-wrap .center ul li img{
+    /* background-color: #fff; */
+    margin-left: 95%;
+    width: 500px;    
+    height: 300px;
+}
+.header .header-wrap .center ul li img:hover{
+    animation: ani 1.8s infinite linear;
+    transform-origin: 50% 0;
+}
+@keyframes ani {
+
+    0%{transform:  rotate(2deg);}
+    30%{transform:  rotate(-4deg);}
+    60%{transform:  rotate(3deg);}
+    75%{transform:  rotate(-4deg);}
+    100%{transform:  rotate(2deg);}
+
+    /* 0%{transform:  rotate(0deg);}
+    30%{transform:  rotate(-6deg);}
+    75%{transform:  rotate(6deg);}
+    /* 70%{transform:  rotate(-6deg);}
+    100%{transform:  rotate(-4deg);} */
+}
+
+
+/* 어바웃 미 */
+.aboutmii{
+    width: 100%;
+}
+
+.aboutmii .aboutmii-center{
+    text-align: center;
+    margin-bottom: 50px;    
+}
+.aboutmii .aboutmii-center p{
+    font-family: 'HeirofLightBold';
+    color: #ded221;
+    font-size: 60px;
+    font-weight: bold; 
+}
+.aboutmii .aboutmii-bottom{
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 350px;
+    margin-bottom: 30px;
+}
+.aboutmii .aboutmii-bottom ul li{
+    float: left;
+}
+.aboutmii .aboutmii-bottom ul li:nth-child(1){
+    width: 50%;
+    height: 100%;
+}
+
+.aboutmii .aboutmii-bottom ul li:nth-child(1) img{
+    width: 350px;
+    height: 350px;
+    margin-left: 90px;
+    border-radius: 50%;
+}
+.aboutmii .aboutmii-bottom ul li:nth-child(2){
+    width: 50%;
+    height: 350px;
+    /* background-color: #fff; */      
+}
+
+.aboutmii .aboutmii-bottom ul li .aboutmii-right{
+    width: 350px;
+    height: 350px;
+    /* background-color: #fff; */
+    text-align: center;    
+}
+
+/* 어바운미- skill */
+.skill{
+    width: 100%;
+    clear: both;
+    text-align: center;
+}
+.skill .skill-top{
+    /* background-color: pink;     */
+    margin-bottom: 30px;        
+}
+.skill .skill-top p{
+    font-family: 'HeirofLightBold';
+    color: #ded221;
+    font-size: 50px;
+    font-weight: bold; 
+}
+
+.skill .skill-bottom{
+    width: 1200px;
+    margin: 0 auto;
+    height: 450px;    
+}
+
+.skill .skill-bottom ul li{
+    float: left;
+    width: 20%;
+    height: 203px;
+    width: 203px;
+    margin-left: 46px;
+}
+.skill .skill-bottom ul li:nth-child(1){
+    margin: 0;
+}
+.skill .skill-bottom ul li img{
+    width: 130px;
+    height: 130px;    
+}
+
+.skill .skill-bottom ul li .progress{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -30px;
+    width: 200px;
+    height: 100px;    
+}
+.progress > svg{border-radius: 3px;
+    background-color: #69bbf94f;
+}
+
+/* works */
+.work .work-wrap{
+    width: 100%;
+    height: 900px;    
+}
+.work .work-wrap .work-top p{
+    font-family: 'HeirofLightBold';
+    color: #ded221;
+    font-size: 60px;
+    font-weight: bold; 
+    text-align: center;
+    margin-bottom: 80px;
+}
+.work .work-wrap .work-bottom{
+    width: 1200px;
+    margin: 0 auto;    
+    /* background-color: #fff; */
+}
+
+.work .work-wrap .work-bottom .work-left{
+    width: 600px;
+    height: 500px;
+    /* background-color: #fff; */
+    float: left;
+    margin-right: 40px;
+}
+
+.work .work-wrap .work-bottom .work-left ul li{
+    width: 190px;
+    height: 120px; 
+    /* 공130 */
+    float: left;
+    margin-left: 5px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.work .work-wrap .work-bottom ul li{
+    transition: 0.3s;
+}
+.work .work-wrap .work-bottom ul li:hover,
+.work .work-wrap .work-bottom ul li.on{
+    transform: rotate(-30deg);
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.work .work-wrap .work-bottom .work-right{
+    width: 550px;    
+    float: right;    
+}
+.work .work-wrap .work-bottom .work-right .right-box{
+    width: 480px;
+    height: 520px;
+    border: 30px solid #ded221;
+    border-top: 40px solid #ded221;
+    border-bottom: 80px solid #ded221;   
+    z-index: 99; 
+}
+.work .work-wrap .work-bottom .work-right .right-box img{
+    width: 480px;
+    height: 520px;       
+    cursor: pointer;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    width: 100%; height: 100%;
+    background-color: #222760b9;
+    left: 0;
+    top: 0;
+}
+.modal-content{
+    display: none;
+    position: fixed;
+    width: 70%;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-y: scroll;
+}
+.modal-content img{
+    width: 100%;
+}
+
+
+
+
+/* 제작과정 */
+.process{ width: 100%; height: 500px; }
+.process .process-wrap{
+    padding-top: 80px;
+    width: 1000px;
+    margin: 0 auto;
+    /* background-color: #fff; */
+}
+.process .process-wrap img{
+    width: 500px;
+    float: left;    
+}
+
+.process .process-wrap img:hover{
+    animation: ani1 1.8s infinite linear;
+    transform-origin: 50% 0;
+}
+@keyframes ani1 {
+    0%{transform:  rotate(2deg);}
+    30%{transform:  rotate(-4deg);}
+    60%{transform:  rotate(3deg);}
+    75%{transform:  rotate(-4deg);}
+    100%{transform:  rotate(2deg);}
+}
+
+
+#typed1{
+    font-family: 'LeferiPoint-SpecialItalicA';
+    color: #ded221;
+    font-size: 30px;
+    height: 120px;
+    line-height: 120px;    
+}
+.typed-cursor{color: #ded221; font-size: 30px;}
+.process .process-wrap ul li{    
+    text-align: center;   
+}
+.process .process-wrap ul li a{
+    border: 3px solid #575103;
+    padding: 15px;
+    border-radius: 10px;   
+}
+
+
+.process .process-wrap ul li{    
+    margin-top: 20px;        
+}
+.process .process-wrap ul li a{
+    color: #ded221;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'LeferiPoint-SpecialItalicA';
+}
+
+
+
+/* contact */
+
+.contact{
+    width: 100%;
+    height: 270px;
+    
+}
+
+.contact .contact1 p{
+    font-family: 'HeirofLightBold';
+    color: #ded221;
+    font-size: 60px;
+    font-weight: bold; 
+    text-align: center;
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+
+.contact .contact2{    
+    width: 1200px;
+    margin: 0 auto;
+}
+.contact .contact2 ul{
+    float: left;    
+}
+
+.contact .contact2 ul li{
+    width: 100%;
+}
+.contact .contact2 ul li:nth-child(1),
+.contact .contact2 ul li:nth-child(2){
+    float: left;
+    width: 300px;    
+}
+
+.contact .contact2 ul li p{
+    font-family: 'LeferiPoint-SpecialItalicA';
+    color: #ded221;
+    font-size: 20px;        
+    margin-bottom: 80px;    
+}
+.contact .contact2 ul li img{
+    width: 150px;
+    height: 100px;
+}
+.contact .contact2 ul li p{    
+    line-height: 100px;    
+}
+
+
+.footer{
+    width: 100%;
+    height: 790px;
+    background-image: url(../images/portfolio/footersky.png);
+    position: relative;
+}
+.footer p{
+    width: 100%;    
+    text-align: center;
+    position: absolute;
+    color: #575103;
+    bottom: 10px;    
+}
+
+
+@media screen and (min-width:641px) and (max-width:1200px){
+    .header{
+        background-image: url("../images/portfolio/nightsky4-1\(1200\).png") ;
+        width: 1200px;
+        height: 86%;
+        transition: 0.3s;
+    }
+    .header .header-wrap .center p{
+        font-size: 6vw;
+    }
+    .header .header-wrap .center p:nth-child(3){
+        font-size: 11vw;
+    }
+    .header .header-wrap .center p:nth-child(4){
+        line-height: 15vh;
+    }
+    .header .header-wrap .center ul li img{
+        width: 35vw;
+        margin: 0 auto;
+        transition: 0.2s;
+    }
+    .aboutmii .aboutmii-center p,
+    .work .work-wrap .work-top p,
+    .contact .contact1 p{
+        font-size: 6vw;
+    }
+    .skill .skill-top p{
+        font-size: 5vw;
+    }
+
+    .aboutmii .aboutmii-center{        
+        width: 100%;
+        height: 100px;
+        padding-top: 80px;
+    }
+
+    .skill .skill-bottom{
+        width: 900px;
+        margin: 0 auto;
+    }
+    .skill .skill-bottom ul li{
+        width: 15%;
+        padding-left: 5px;
+    }
+
+
+    .footer{
+        background-image: url("../images/portfolio/footersky\(1200\).png") ;
+        width: 100%;
+        height: 70%;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 640px) {
+    .header{
+        background-image: url("../images/portfolio/nightsky4\(640\).png") ;
+        width: 100%;
+        height: 38%;
+        transition: 0.3s;
+    }
+    .header .header-wrap{
+        width: 640px;
+    }
+    .header .header-wrap .nav{
+        margin: 0 auto;
+        height: 100px;        
+    }
+
+    .header .nav .left .logo{
+        width: 100%;
+        margin: 0 auto;              
+    }
+    .header .nav .left .logo img{
+        width: 70px;
+    }
+    .header .nav .left .logo ul li{
+        text-align: center;            
+    }
+    .header .header-wrap .nav .right{
+        display: none;
+    }
+    .header .header-wrap .center{
+        top: 100px;        
+    }
+    .header .header-wrap .center p{
+        font-size: 6vw;
+        /* background-color: #fff; */        
+    }
+    .header .header-wrap .center p:nth-child(3){
+        font-size: 14vw;
+    }
+    .header .header-wrap .center p:nth-child(4){
+        line-height: 14vh;
+    }
+    .header .header-wrap .center ul li img{
+        /* display: none;         */
+        margin: 0 auto;
+        width: 55vw;        
+    }
+
+    .aboutmii{
+        padding-top: 45%;
+    }
+    .aboutmii .aboutmii-center p,
+    .work .work-wrap .work-top p,
+    .contact .contact1 p{
+        font-size: 8vw;
+    }
+
+    .aboutmii .aboutmii-bottom ul li:nth-child(1){
+        width: 640px;
+        text-align: center;
+        /* background-color: #fff; */
+    }
+    .aboutmii .aboutmii-bottom ul li:nth-child(1) img{
+        margin-left: 0;
+    }
+    .aboutmii .aboutmii-bottom ul li .aboutmii-right{
+        width: 640px;        
+        text-align: center;
+        padding-top: 50px;
+    }
+
+
+    .skill .skill-top p{
+        font-size: 7vw;
+    }
+    .skill .skill-bottom{
+        width: 100%;
+        height: 620px;       
+    }
+    .skill .skill-bottom ul li{
+        margin-left: 0;
+    }
+    .skill .skill-bottom ul li:nth-child(1),
+    .skill .skill-bottom ul li:nth-child(2){
+        width: 40%;        
+    }
+    .skill .skill-bottom ul li:nth-child(1){
+        margin-left: 60px;
+    }
+    .skill .skill-bottom ul li:nth-child(3),
+    .skill .skill-bottom ul li:nth-child(4),
+    .skill .skill-bottom ul li:nth-child(5){
+        width: 33%;
+    }
+    .skill .skill-bottom ul li img{
+        width: 110px;
+        height: 110px;    
+    }    
+    .skill .skill-bottom ul li .progress{        
+        width: 130px;
+        height: 70px;    
+    }
+    
+    .work .work-wrap .work-bottom .work-left{
+        margin: 0 auto;
+    }
+    .work .work-right{
+        display: none;
+    }
+
+    .process .process-wrap img{
+        display: none;
+    }
+    .process .process-wrap ul li{
+        width: 640px;
+    }
+
+
+
+    .footer{
+        background-image: url("../images/portfolio/footersky\(640\).png") ;
+        width: 100%;
+        height: 39%;
+    }
+
+
+}
